@@ -1,0 +1,6 @@
+blueprints/**/files/**
+node_modules/**
+dist/**
+src/index.html
+src/static/**
+bower_components/**

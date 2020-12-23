@@ -1,0 +1,33 @@
+$color_purple_dark: hsl(220, 22%, 24%); // 46
+$color_purple_dark_fade: hsl(220, 12%, 34%); // 46
+@mixin purple_fading_background {
+  background-image: linear-gradient(
+    to right,
+    $color_purple_dark,
+    $color_purple_dark_fade
+  );
+}
+.root {
+  @include purple_fading_background();
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.sky {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover, auto;
+  text-align: center;
+  padding-top: 100px;
+  min-height: 100vh;
+}
+.info {
+  z-index: 1;
+}
+.text {
+  max-width: 450px !important;
+  p {
+    font-size: 3rem !important;
+  }
+}

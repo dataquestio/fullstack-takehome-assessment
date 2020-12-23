@@ -1,0 +1,17 @@
+version: "3.5"
+
+services:
+  postgres:
+    image: postgres:9.6
+    ports:
+      - "9932:5432"
+    environment:
+      POSTGRES_DB: dsserver
+      POSTGRES_USER: dsserver
+      POSTGRES_PASSWORD: secretpassword
+    command: postgres -c fsync=off -c synchronous_commit=off -c full_page_writes=off
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"

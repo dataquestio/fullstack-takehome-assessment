@@ -1,0 +1,23 @@
+@import "~styles/base";
+
+.root {
+  > div {
+    flex: 0 1 100%;
+
+    &:first-child {
+      height: calc(100% - 98px);
+      max-width: 100%;
+    }
+  }
+}
+$border-style: solid 1px;
+$border-style-panels: $border-style #ababab;
+
+.shortcuts {
+  border-bottom: $border-style-panels;
+  border-top: $border-style-panels;
+
+  & > * {
+    margin: 0 1rem;
+  }
+}
